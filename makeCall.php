@@ -19,9 +19,9 @@ if (!isset($to) || empty($to)) {
  */
 $callerNumber = '5514998100110';
 
-$response = new Twilio\Twiml();
+$response = new Twilio\TwiML\VoiceResponse;
 if (!isset($to) || empty($to)) {
-  $response->say('Congratulations! You have just made your first call! Good bye.');
+  $response->say('Parabéns! Você acabou de fazer sua primeira chamada!');
 } else if (is_numeric($to)) {
   $dial = $response->dial(
     array(
